@@ -9,6 +9,7 @@ var message = document.getElementById('message');
 	handle = document.getElementById('handle');
 	btn = document.getElementById('send');
 	output = document.getElementById('output');
+	chatWindow = document.getElementById("chat-window")
 
 
 // Lähetys
@@ -53,7 +54,9 @@ message.onkeypress = function(evt) {
 
 //Listen for events
 socket.on('chat', function(data){
+	chatWindow.scrollTop = 10000;
 	output.innerHTML += '<p><strong>' + data.handle +': </strong>' + data.message + '</p>'
+	
 });
 
 
