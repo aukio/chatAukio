@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<title>Aukio</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+	<link href="/styles.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+	<div id="aukio-chat">
+		<div id="logo"><img  src="/aukioLogo.png"></img></div>
+		<div id="kunta"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Helsinki.vaakuna.svg/75px-Helsinki.vaakuna.svg.png" alt="Akaa" height="28" width="25"></div>
+		<div id="room"><h2>Helsinki</h2></div>
+		<div id="version"><p>0.01</p></div>
+		<div id="currentusers"><p style="font-size: 14">users in room: 42</p></div>
+
+		<br><br>
+
+		<div id="chat-window">
+		<div id="output"></div>
+		</div>
+		<input id="handle" type="text" style="color: #ffe292" onfocus="this.value=''" maxlength="12" placeholder="user" />
+		<input id="message" type="text" onfocus="this.value=''"  placeholder="*" maxlength="200" style="padding-bottom: 12px" />
+		
+		<br />
+		<button id="send">></button>
+		<div id="mainos">
+			<div id="mainos-ikkuna">
+			<p>mainos</p>
+			</div>
+		</div>	
+
+	</div>
+
+
+<div id='copyright'><p style="text-align: right;color: #fff5f021";>teo@aukio.app</p></div>
+
+	<script src="/chat.js"></script>
+</body>
+</html>
