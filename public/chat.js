@@ -54,8 +54,8 @@ message.onkeypress = function(evt) {
 
 //Listen for events
 socket.on('chat', function(data){
-	chatWindow.scrollTop = 10000;
 	output.innerHTML += '<p><strong>' + data.handle +': </strong>' + data.message + '</p>'
+	chatWindow.scrollTop = 10000;
 	
 });
 
