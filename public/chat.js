@@ -37,11 +37,6 @@ function SendMessage(){
 		document.getElementById("message").value = ""
 }
 
-//Kun buttonia painetaan, kutsuu SendMessage fuctionin ylempänä
-btn.onclick = function(){
-	SendMessage();
-}
-
 message.onkeypress = function(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
