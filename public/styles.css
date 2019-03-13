@@ -48,7 +48,7 @@ body{
 #message{
     background: #9c767614;
     font-size: 14px;
-    padding: 12px 12px 18px;
+    padding: 12px 12px 20px;
     width: 100%;
     border-radius: 22px;
     color: #b5b5b5;
@@ -58,8 +58,7 @@ body{
     outline:none;
     margin-top: -5px;
     line-height: 1px;
-    height: 34px !important;
-
+    height: 40px !important;
 }
 
 #handle{
@@ -70,6 +69,7 @@ br{
     
     margin: 1px;
 }
+
 h2{
     font-size: 22px;
     padding: 0px 0px;
@@ -197,7 +197,13 @@ button{
 }
 
 input::placeholder {
-  color: #444444;
+  font-size: 14;
+  font-family: Nunito;
+  font-weight: bold;
+}
+
+#message::placeholder {
+  color: #00ffc2;
   font-size: 14;
   font-family: Nunito;
   font-weight: bold;
