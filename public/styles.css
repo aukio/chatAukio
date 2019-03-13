@@ -14,7 +14,6 @@ body{
     width:20px;
     height:20px;
     align-self: right;
-
 }
 
 
@@ -197,7 +196,7 @@ button{
 }
 
 input::placeholder {
-  font-size: 14;
+  font-size: 14px;
   font-family: Nunito;
   font-weight: bold;
 }
