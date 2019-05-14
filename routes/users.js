@@ -246,8 +246,8 @@ router.post("/forgot", (req, res, next) => {
       var smtpTransport = nodemailer.createTransport({
         service: 'SendGrid',
         auth: {
-          user: 'NilssonNiklas',
-          pass: '0N0smultitool97'
+          user: '',
+          pass: ''
         }
       });
       var mailOptions = {
