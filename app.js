@@ -144,10 +144,6 @@ function onListening() {
 }
 
 
-
-
-
-
 //Setup Connected user
 
 var io = socket(server);
