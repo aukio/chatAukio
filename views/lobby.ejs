@@ -1,0 +1,61 @@
+<div class="navbar">
+  <a href="/chat/room/suomi">Lobby</a>
+  <a href="/chat/room/map">Map</a>
+	
+  <div class="dropdown" style="float: right">
+    <button class="dropbtn"> <div class="w3-large"><i class="fa fa-home"></i> Home</div>
+    </button>
+    <div class="dropdown-content">
+      <a href="/users/profileEdit">Profile</a>
+      <a href="/about">About</a>
+      <a href="/users/logout">logout</a>
+    </div>
+  </div> 
+</div>
+
+
+     <script>
+				const markerData =  "<%- marker.name %>";
+        const userName = "<%- name %>";         
+				const messages = <%- messages %>;
+
+     </script>
+
+	<div id="aukio-chat">
+	<div class="navbar" style="background: transparent;">
+  <button id="chat-button" class="tablinks" onclick="openTab(event, 'chat-window')">Chat</button>
+  <button class="tablinks" onclick="openTab(event, 'user-window')">Users</button>
+</div>
+
+
+
+	<div class="aukio-header">
+		<div id="logo"><img  src="/Images/aukioLogo.png"></div>
+		<div id="kunta"><img src="<%- marker.photo %>" alt="Akaa" height="28" width="25"></div>
+		<div id="room"><h2> lobby</h2></div>
+		</div>
+
+		<div id="chat-window" class="tableTab">
+		<div id="output" class="chat"></div>
+		</div>
+				<div id="user-window" class="tableTab">
+		<div id="userList" class="grid-container">
+		<input type="text" id="userSearch" class="form-control" 
+		onkeyup="SearchForUsers()" placeholder="Search.." title="Type in a category" style="border-radius: 2px;">
+
+</div>
+		</div>
+		<div id="eventBox"><i>jotain</i></div>
+
+		<input id="message" type="text" title="use '/name message' format to whisper" placeholder=">"
+		 maxlength="200" style="padding-bottom: 12px" />
+
+	</div>
+
+<div id='copyright'  ><a style="text-align: right; color: #fff5f021" href="/credits">teo@aukio.app & Nilsson@aukio.app</a></div>
+
+<script src="/JS/chat.js"></script>
+<script src="/JS/lobbyLogic.js"></script>
+
+
+

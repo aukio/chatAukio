@@ -1,0 +1,97 @@
+<div class="navbar">
+  <a href="/chat/room/suomi">Lobby</a>
+  <a href="/chat/room/map">Map</a>
+	
+  <div class="dropdown" style="float: right">
+    <button class="dropbtn">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/users/profileEdit">Edit profile</a>
+      <a href="/about">About</a>
+      <a href="/users/logout">logout</a>
+    </div>
+  </div> 
+</div>
+
+<div id="aukio-chat">
+
+        <h2>
+          <i class="fas fa-user-plus"></i> Your Profile
+        </h2>
+
+       <% include ./partials/messages %>
+  
+        <form action="/users/profileEdit" method="POST">
+          <div class="form-group">
+            <label for="name">Username</label>
+            <input
+              type="name"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="Enter Name"
+              readonly
+              value="<%= typeof name != 'undefined' ? name : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <button class="normalButton" type="submit" class="btn btn-primary btn-block">
+            Update
+          </button>
+        </form>
+
+<h2 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> Update password
+        </h2>
+
+
+         <form action="/users/changePassword" method="POST">
+          <div class="form-group">
+            <label for="password">New password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="New password"
+              value="<%= typeof password != 'undefined' ? password : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password2">New password again</label>
+            <input
+              type="password"
+              id="password2"
+              name="password2"
+              class="form-control"
+              placeholder="New password again"
+              value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password3">Confirm password</label>
+            <input
+              type="password"
+              id="password3"
+              name="password3"
+              class="form-control"
+              placeholder="Confirm password"
+              value="<%= typeof password3 != 'undefined' ? password3 : '' %>"
+            />
+          </div>
+          <button  class="normalButton" type="submit" class="btn btn-primary btn-block">
+            Update
+          </button>
+        </form>
+      </div>

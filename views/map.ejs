@@ -1,0 +1,43 @@
+<div class="navbar">
+  <a href="/chat/room/suomi">Lobby</a>
+  <a href="/chat/room/map">Map</a>
+	
+  <div class="dropdown" style="float: right">
+    <button class="dropbtn">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/users/profileEdit">Profile</a>
+      <a href="/about">About</a>
+      <a href="/users/logout">logout</a>
+    </div>
+  </div> 
+</div>
+
+
+
+
+<h2>City map</h2>
+<p style="font-size: 18px; padding: 3px 8px;">Select chatting room from map</p>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+  
+
+ <div id="mapid"></div>
+
+
+ 
+
+     <script>
+     
+        const markersData =  <%- markers %>;    
+     </script>
+
+<script src="/JS/map.js"></script>
+
+

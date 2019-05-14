@@ -1,0 +1,48 @@
+
+      <h2 class="text-center mb-3">
+        <i class="fas fa-user-plus"></i> Add new markers (Developers only)
+      </h2>
+     <% include ./partials/messages %>
+
+      <form action="/chat/addMarker" method="POST">
+        <div class="form-group">
+          <label for="name">City name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            placeholder="Enter Name"
+          />
+        </div>
+                <div class="form-group">
+          <label for="password">Latitude</label>
+          <input
+            type="lat"
+            id="lat"
+            name="lat"
+            placeholder="60.19"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">longitude</label>
+          <input
+            type="lon"
+            id="lon"
+            name="lon"
+            placeholder="24.94"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password2">Url kunnnan logoon</label>
+          <input
+            type="photo"
+            id="photo"
+            name="photo"
+            placeholder="URL here"
+          />
+        </div>
+        <button class="normalButton" type="submit" class="btn btn-primary btn-block">
+          Submit
+        </button>
+      </form>
