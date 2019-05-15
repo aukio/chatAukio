@@ -33,7 +33,7 @@ app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static('views'));
-app.use('/', express.static('public_html'))
+
 
 
 //Bodyparser
@@ -45,6 +45,13 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+
+app.use(function(req, res, next) {
+  if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect(['https://', req.get('Host'), req.url].join(''));
+  }
+  return next();
+});
 
 //compression
 app.use(compression()); //Compress all routes

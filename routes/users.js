@@ -12,10 +12,10 @@ const async = require('async');
 const User = require("../models/User");
 
 // Login Page
-router.get("/login", (req, res) => res.render("Login"));
+router.get("/login", (req, res) => res.render("login"));
 
 // Register page
-router.get("/register", ensureAuthenticated,(req, res) => res.render("Register"));
+router.get("/register",(req, res) => res.render("register"));
 
 // Forgot password pages
 router.get("/forgot", (req, res) => res.render("forgot"));
