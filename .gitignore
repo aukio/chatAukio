@@ -36,7 +36,8 @@ build/Release
 node_modules/
 jspm_packages/
 config/
-routes/users.js
+routes/
+
 # TypeScript v1 declaration files
 typings/
 
