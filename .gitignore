@@ -1,3 +1,5 @@
+routes/users.js
+
 # Logs
 logs
 *.log
@@ -35,8 +37,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-config/
-routes/
+
+
 
 # TypeScript v1 declaration files
 typings/
